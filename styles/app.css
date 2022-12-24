@@ -16,4 +16,23 @@ html {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: #16394c;
+    color: var(--text);
+}
+#Country-section {
+    text-align: center;
+    border-bottom: 10px;
+}
+#status-weather  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    text-align: center;
+    align-items: center;
+    grid-template-rows: 400px;
+}
+#status-weather img {
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
 }
