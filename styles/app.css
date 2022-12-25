@@ -19,6 +19,9 @@ body {
     background-color: #16394c;
     color: var(--text);
 }
+div {
+    display: grid;
+}
 #Country-section {
     text-align: center;
     border-bottom: 10px;
@@ -35,4 +38,23 @@ body {
     width: 200px;
     height: 200px;
     margin-left: 20px;
+    border-radius: 10px;
+}
+#status-weather .weather-logo h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+#status-weather .temperature {
+    font-size: 60px;
+}
+#Future-temperature-section {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    grid-template-columns: repeat(5, minmax(270px, 1fr));
+    grid-template-rows: repeat(3, minmax(190px, 1fr));
+    font-size: var(--lg);
+}
+#Future-temperature-section .temperature-section .temperature {
 }
