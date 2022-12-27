@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
                     location.textContent = loc
 
                     let wind = data.wind.speed
-                    velocity_wind.textContent = `${wind} m/s`
+                    velocity_wind.textContent = `Velo del Viento ${wind} m/s`
 
                     console.log(data)
 
