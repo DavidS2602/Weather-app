@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DavidS2602/Weather-app/issues"
   },
-  "homepage": "https://github.com/DavidS2602/Weather-app#readme"
+  "homepage": "https://github.com/DavidS2602/Weather-app#readme",
+  "dependencies": {
+    "axios": "^1.2.1"
+  }
 }

@@ -10,54 +10,20 @@
     <title>Weather-app</title>
 </head>
 <body>
-    <header id="Country-section">
-        <h1 class="Country-title">Houston,Texas,United States of America</h1>
-    </header>
-
-    <section id="status-weather">
-        <div class="weather-logo">
-            <span class="status-logo"><img src="./img/nubes.jpg" alt=""></span>
-            <h2>Clear</h2>
+    <main id="container">
+        <div id="box-1">
+            <h1 id="temperature"></h1>
+            <h1 id="weather-description"></h1>
         </div>
-
-        <div class="temperature-data">
-            <h2 class="temperature">16°C</h2>
+        <div id="box-2">
+            <h2 id="country"></h2>
+            <img id="animated-logo" src="" alt="" width="128px" height="128px">
         </div>
-
-        <div class="weather-data">
-            <h2 class="data"></h2>
+        <div id="box-3">
+            <h3 id="wind"></h3>
+            <h1 id="velocity-wind"></h1>
         </div>
-    </section>
-
-    <section id="Future-temperature-section">
-        <div class="temperature-section">
-            <h2 class="day">SAT</h2>
-            <span></span>
-            <div></div>
-            <h2 class="temperature-day">12°C</h2>
-        </div>
-        <div class="temperature-section">
-            <h2 class="day">SAT</h2>
-            <span></span>
-            <h2 class="temperature-day"></h2>
-        </div>
-        <div class="temperature-section">
-            <h2 class="day">SAT</h2>
-            <span></span>
-            <h2 class="temperature-day"></h2>
-        </div>
-        <div class="temperature-section">
-            <h2 class="day">SAT</h2>
-            <span></span>
-            <h2 class="temperature-day"></h2>
-        </div>
-        <div class="temperature-section">
-            <h2 class="day">SAT</h2>
-            <span></span>
-            <h2 class="temperature-day"></h2>
-        </div>
-    </section>
-
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/key.js"></script>
     <script src="./src/main.js"></script>
