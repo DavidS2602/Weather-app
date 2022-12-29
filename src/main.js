@@ -15,52 +15,43 @@ window.addEventListener('load', () => {
             let api_key = API_KEY
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`;
 
-
             axios
-                .get(url)
-                .then(Response => {
-                    let data = Response.data
-                    let temp = Math.round(data.main.temp)//Para quitar el redondeo
-                    temperature.textContent = `${temp} °C`
+            .get(url)
+            .then(Response => {
+                const data = Response.data
+                temperature.textContent = `Temperatura ${Math.round(data.main.temp)}°C`
+                console.log(data)
 
-                    let description = data.weather[0].description
-                    weather_description.textContent = description.toUpperCase()
+                weather_description.textContent = `${data.weather[0].description}`
+                location.textContent = data.name
 
-                    let loc = data.name
-                    location.textContent = loc
+                velocity_wind.textContent = `Vel. del viento ${data.wind.speed}m/s`
 
-                    let wind = data.wind.speed
-                    velocity_wind.textContent = `Vel. Viento ${wind} m/s`
-
-                    console.log(data)
-
-                    //Animated Icons.
-                    switch (data.weather[0].main) {
-                        case 'Clear':
-                            animatedIcon.src = '../animated/day.svg'
-                            break;
-                        case 'Clouds':
-                            animatedIcon.src = '../animated/cloudy-day-1.svg'
-                            break;
-                        case 'Thunderstorm':
-                            animatedIcon.src = '../animated/thunder.svg'
-                            break;
-                        case 'Drizzle':
-                            animatedIcon.src = '../animated/rainy-2.svg'
-                            break;
-                        case 'Rain':
-                            animatedIcon.src = '../animated/rainy-7.svg'
-                            break;
-                        case 'Snow':
-                            animatedIcon.src = '../animated/snowy-6.svg'
-                            break;
-                        case 'Atmosphere':
-                            animatedIcon.src = '../animated/weather.svg'
-                            break;
-                        default:
-                            animatedIcon.src = '../animated/cloudy-day-1.svg'
-                            break;
-                    }
+                switch (data.weather[0].main) {
+                    case 'Thunderstorm':
+                        animatedIcon.src = '../animated/thunder.svg'
+                        break;
+                    case 'Drizzle':
+                        animatedIcon.src = '../animated/rainy-2.svg'
+                        break;
+                    case 'Rain':
+                        animatedIcon.src = '../animated/rainy-7.svg'
+                        break;
+                    case 'Snow':
+                        animatedIcon.src = '../animated/snowy-6.svg'
+                        break;
+                    case 'Clear':
+                        animatedIcon.src = '../animated/day.svg'
+                        break;
+                    case 'Atmosphere':
+                        animatedIcon.src = '../animated/weather.svg'
+                        break;
+                    case 'Clouds':
+                        animatedIcon.src = '../animated/cloudy-day-1.svg'
+                        break;
+                    default:
+                        animatedIcon.src = 'animated/cloudy-day-1.svg '
+                }
                 })
         })
     }
