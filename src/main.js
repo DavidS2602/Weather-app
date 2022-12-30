@@ -51,7 +51,7 @@ window.addEventListener('load', () => {
                         break;
                     default:
                         animatedIcon.src = 'animated/cloudy-day-1.svg '
-                }
+                    }
                 })
         })
     }
